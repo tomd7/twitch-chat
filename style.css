@@ -1,0 +1,90 @@
+:root {
+    --bgColor: #1E1E1E;
+    --foreColor: #FAFAFA;
+    --msgBgColor: rgba(255, 255, 255, .2);
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--bgColor);
+    color: var(--foreColor);
+}
+
+.chat {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.chat li {
+    position: relative;
+    padding: 0 1rem;
+    padding-top: 2.2rem;
+}
+
+.chat .message {
+    padding: 1rem;
+    padding-top: 1.8rem;
+    background: var(--msgBgColor);
+    border-radius: .4rem;
+}
+
+.chat .username {
+    display: flex;
+    position: absolute;
+    transform: translateY(-50%);
+    margin-left: 1rem;
+    padding: .6rem .8rem;
+    background: #25c1db;
+    background: var(--msg-color);
+    color: var(--fg-color);
+    border-radius: .4rem;
+}
+
+.chat .badges {
+    display: flex;
+    align-items: center;
+}
+
+.chat .badges .badge {
+    max-height: 100%;
+    height: 1.2rem;
+    margin-right: .4rem;
+}
+
+.chat .emote {
+    height: 1rem;
+}
+
+.channel-name-label {
+    display: flex;
+}
+
+.channel-name-label .channel-name {
+    background: var(--msgBgColor);
+    border: none;
+    padding: 1rem .6rem;
+    font: inherit;
+    outline: none;
+    color: var(--foreColor);
+    width: 100%;
+}
+
+.channel-name-label .btn-update-channel {
+    background: var(--foreColor);
+    color: var(--bgColor);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
